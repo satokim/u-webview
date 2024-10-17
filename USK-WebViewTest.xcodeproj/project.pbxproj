@@ -52,6 +52,7 @@
 		26F6893A2CBFBFC300C5BE8F /* USK_WebViewTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USK_WebViewTestUITests.swift; sourceTree = "<group>"; };
 		26F6893C2CBFBFC300C5BE8F /* USK_WebViewTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USK_WebViewTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		26F689492CBFC14C00C5BE8F /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		E36AAE162CC0B6C30006531E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 		26F6891E2CBFBFC100C5BE8F /* USK-WebViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				E36AAE162CC0B6C30006531E /* Info.plist */,
 				26F6891F2CBFBFC100C5BE8F /* USK_WebViewTestApp.swift */,
 				26F689212CBFBFC100C5BE8F /* ContentView.swift */,
 				26F689492CBFC14C00C5BE8F /* InputView.swift */,
@@ -441,6 +443,7 @@
 				DEVELOPMENT_TEAM = DY585YK64D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "USK-WebViewTest/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,6 +473,7 @@
 				DEVELOPMENT_TEAM = DY585YK64D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "USK-WebViewTest/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

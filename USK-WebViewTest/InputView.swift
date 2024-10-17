@@ -17,7 +17,7 @@ struct InputView: View {
     
     var body: some View {
         
-        NavigationStack {
+        NavigationView {
             
             VStack {
                 Image(systemName: "globe")
