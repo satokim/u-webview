@@ -10,7 +10,7 @@ import WebKit
 
 struct CustomWebView: View {
     
-    @State var url: URL
+    @State var url: URL?
     
     var body: some View {
         VStack {

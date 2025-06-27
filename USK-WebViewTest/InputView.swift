@@ -10,50 +10,42 @@ import SwiftUI
 import WebKit
 
 struct InputView: View {
-    
     @State private var urlString: String = ""
-    @State private var url: URL?
-    @State private var isWebViewVisible: Bool = false
-    
+    @State private var url: URL? = nil
+    @State private var isWebViewVisible = false
+
     var body: some View {
-        
-        NavigationView {
-            
+        NavigationStack {
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("USK-WebView")
-                
                 TextField("Enter URL", text: $urlString)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .textInputAutocapitalization(.none)
-                    .keyboardType(.URL)
                     .padding()
-                
-                
+
                 Button("Load URL") {
-                    if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
-                        self.url = url
+                    if let validURL = URL(string: urlString), UIApplication.shared.canOpenURL(validURL) {
+                        url = validURL
                         isWebViewVisible = true
                     } else {
-                        urlString = ""
+                        url = nil
                     }
+                    let _ = print("isWebViewVisible:", isWebViewVisible)
                 }
                 .padding()
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-            }
-            .padding()
-            .navigationDestination(isPresented: $isWebViewVisible) {
-                if let url = url, isWebViewVisible {
-                    CustomWebView(url: url)
+                .navigationDestination(isPresented: $isWebViewVisible) {
+                    if let validURL = url {
+                        CustomWebView(url: validURL)
+                    }
                 }
             }
+            .navigationTitle("USK-WebView")
+            .padding()
         }
     }
 }
+
 
 #Preview {
     InputView()
